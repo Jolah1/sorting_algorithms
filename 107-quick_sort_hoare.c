@@ -36,6 +36,8 @@ size_t hoare_partition(int *array, ssize_t size, ssize_t lo, ssize_t hi)
 	{
 		while (array[++i] < pivot)
 			;
+		while (array[--j] > pivot)
+			;
 		if (i < j)
 			swap(array, size, &array[i], &array[j]);
 		else if (i >= j)
